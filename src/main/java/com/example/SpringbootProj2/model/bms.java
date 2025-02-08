@@ -18,10 +18,10 @@ import java.io.Serializable;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-public class bms implements  Serializable{
+public class bms {
 
-    public static final long serialVersionUID =1L;
-    @Id
+//    public static final long serialVersionUID =1L;
+   @Id
     private int movieid;
     private String moviename;
     private long ticketprice;
@@ -29,6 +29,30 @@ public class bms implements  Serializable{
     public bms(int movieid, String moviename, long ticketprice) {
         this.movieid = movieid;
         this.moviename = moviename;
+        this.ticketprice = ticketprice;
+    }
+
+    public int getMovieid() {
+        return movieid;
+    }
+
+    public void setMovieid(int movieid) {
+        this.movieid = movieid;
+    }
+
+    public String getMoviename() {
+        return moviename;
+    }
+
+    public void setMoviename(String moviename) {
+        this.moviename = moviename;
+    }
+
+    public long getTicketprice() {
+        return ticketprice;
+    }
+
+    public void setTicketprice(long ticketprice) {
         this.ticketprice = ticketprice;
     }
 
@@ -41,7 +65,6 @@ public class bms implements  Serializable{
                 '}';
     }
 
-
-
-
+    public bms() {
+    }
 }
