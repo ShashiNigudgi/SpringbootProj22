@@ -61,4 +61,12 @@ public class BookticketsControlller {
         bookService.deletingticket(deleting);
         return " DELETE Success ::" +deleting;
     }
+    //Delete using ticket id
+
+    @DeleteMapping("/booktickets/{ticketid}")
+    public String DeleteBookDetailsusingId(@PathVariable int ticketid)
+    {
+        bookService.deletingticketbyId(ticketid);
+        return "DELETING BY ID IS SUCCESS ::" +ticketid;
+    }
 }
