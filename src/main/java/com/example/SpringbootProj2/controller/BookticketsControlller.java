@@ -40,7 +40,7 @@ public class BookticketsControlller {
     }
 
     @RequestMapping(value = "/booktickets",method = RequestMethod.POST)
-    public String addBookDetails(@RequestBody bms adding)
+    public String addBookDetails(@RequestBody List<bms> adding)
     {
         System.out.println("check here...!"+adding);
         bookService.addticket(adding);
